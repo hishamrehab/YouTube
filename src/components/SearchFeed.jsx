@@ -15,10 +15,10 @@ const SearchFeed = () => {
       setVideos(data.items);
     });
 
-fetchFromApi(`search?part=snippet&relatesToVideo`)
 
   }, [searchTerm]);
 
+  
   
 
 

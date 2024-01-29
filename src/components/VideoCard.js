@@ -20,15 +20,17 @@ const VideoCard = ({
   return (
     <Card
       sx={{
-        width: { md: "320px", xs: "100%" },
-        boxShadow: "none",
-        borderRadius: "0",
+        width: 
+         {  xs: "100%", sm: "358px", md: "320px" },
+          boxShadow: "none",
+          borderRadius: 0,
+        
       }}
     >
       <Link to={videoId ? `/video/${videoId}` : demoVideoUrl}>
         <CardMedia
           sx={{
-            width: 358,
+            width: { xs: "100%", sm: "358px", md: "320px" },
             height: 180,
             objectFit: "fill",
           }}
@@ -49,8 +51,6 @@ const VideoCard = ({
           </Typography>
         </Link>
 
-
-
         <Link
           to={
             snippet?.channelId
@@ -69,9 +69,7 @@ const VideoCard = ({
             />
           </Typography>
         </Link>
-        
-        
-       </CardContent>
+      </CardContent>
     </Card>
   );
 };
