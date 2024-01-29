@@ -14,9 +14,18 @@ const SearchFeed = () => {
     .then((data) => {
       setVideos(data.items);
     });
+
+fetchFromApi(`search?part=snippet&relatesToVideo`)
+
   }, [searchTerm]);
 
   
+
+
+  
+ 
+
+
   return (
     <Box
       p={2}
