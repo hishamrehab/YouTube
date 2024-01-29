@@ -20,9 +20,9 @@ const VideoCard = ({
   return (
     <Card
       sx={{
-        width: { md: "320px", sx: "100%" },
+        width: { md: "320px", xs: "100%" },
         boxShadow: "none",
-        borderRadius: "0 ",
+        borderRadius: "0",
       }}
     >
       <Link to={videoId ? `/video/${videoId}` : demoVideoUrl}>
@@ -49,6 +49,8 @@ const VideoCard = ({
           </Typography>
         </Link>
 
+
+
         <Link
           to={
             snippet?.channelId
@@ -67,7 +69,9 @@ const VideoCard = ({
             />
           </Typography>
         </Link>
-      </CardContent>
+        
+        
+       </CardContent>
     </Card>
   );
 };
