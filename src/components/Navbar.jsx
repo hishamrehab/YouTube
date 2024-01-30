@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../image/logo.png";
+import logo from "../image/logo2.png";
 import { Stack } from "@mui/material";
 import { Link } from "react-router-dom";
 import { SearchBar } from "./index";
@@ -11,9 +11,13 @@ const Navbar = () => {
       p={2}
       sx={{
         position: "sticky",
-        background: "#000",
+        background: "#FFF",
         top: 0,
-        justifyContent: "space-between",
+        
+        flexWrap: "wrap",
+        alignItems: "center",
+         alignContent:"center",
+        justifyContent: { xs: "center", md: "space-between" },
       }}
     >
       <Link
@@ -21,9 +25,18 @@ const Navbar = () => {
         style={{
           display: "flex",
           alignItems: "center",
+          gap: "0",
         }}
       >
         <img src={logo} alt="logo" height={50} />
+        <h2
+          style={{
+            fontSize: "25px",
+            fontWeight: "bold",
+          }}
+        >
+          YouTube
+        </h2>
       </Link>
       <SearchBar />
     </Stack>

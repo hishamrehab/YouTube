@@ -15,13 +15,13 @@ import TheaterComedyIcon from "@mui/icons-material/TheaterComedy";
 import FitnessCenterIcon from "@mui/icons-material/FitnessCenter";
 import DeveloperModeIcon from "@mui/icons-material/DeveloperMode";
 
+
 export const categories = [
-  { name: "New", icon: <HomeIcon /> },
-  { name: "JS Mastery", icon: <CodeIcon /> },
-  { name: "Coding", icon: <CodeIcon /> },
-  { name: "ReactJS", icon: <CodeIcon /> },
-  { name: "NextJS", icon: <CodeIcon /> },
+  { name: "ALL", icon: <HomeIcon /> },
   { name: "Music", icon: <MusicNoteIcon /> },
+  { name: "Television Series", icon: <CodeIcon /> },
+  { name: "NextJS", icon: <CodeIcon /> },
+  { name: "Mixes", icon: <CodeIcon /> },
   { name: "Education", icon: <SchoolIcon /> },
   { name: "Podcast", icon: <GraphicEqIcon /> },
   { name: "Movie", icon: <OndemandVideoIcon /> },
@@ -34,6 +34,8 @@ export const categories = [
   { name: "Gym", icon: <FitnessCenterIcon /> },
   { name: "Crypto", icon: <DeveloperModeIcon /> },
 ];
+
+
 
 const Sidebar = ({ selectedCategory, setSelectedCategory }) => {
   return (
@@ -52,8 +54,8 @@ const Sidebar = ({ selectedCategory, setSelectedCategory }) => {
             setSelectedCategory(category.name);
           }}
           style={{
-            background: category.name === selectedCategory && "#FC1503",
-            color: " white",
+            background: category.name === selectedCategory && "#d8d0d0",
+            color: "#000",
             display: "flex",
             flexDirection: "row",
             flexWrap: "wrap",
@@ -63,7 +65,7 @@ const Sidebar = ({ selectedCategory, setSelectedCategory }) => {
         >
           <span
             style={{
-              color: category.name === selectedCategory ? "white" : "red ",
+              color: category.name === selectedCategory ? "#000" : "#gray",
               marginRight: "15px",
             }}
           >

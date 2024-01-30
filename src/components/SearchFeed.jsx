@@ -10,21 +10,10 @@ const SearchFeed = () => {
   const { searchTerm } = useParams();
 
   useEffect(() => {
-    fetchFromApi(`search?part=snippet&q=${searchTerm}`)
-    .then((data) => {
+    fetchFromApi(`search?part=snippet&q=${searchTerm}`).then((data) => {
       setVideos(data.items);
     });
-
-
   }, [searchTerm]);
-
-  
-  
-
-
-  
- 
-
 
   return (
     <Box
@@ -33,6 +22,7 @@ const SearchFeed = () => {
         overflowY: "auto",
         height: "90vh",
         flex: 2,
+       
       }}
     >
       <Typography
@@ -40,7 +30,8 @@ const SearchFeed = () => {
         fontWeight="bold"
         mb={2}
         sx={{
-          color: "white",
+          color: "#000",
+
         }}
       >
         Search Results for:{" "}

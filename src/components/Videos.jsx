@@ -5,9 +5,12 @@ import { VideoCard, ChannelCard } from "./index";
 const Videos = ({ videos }) => {
   // console.log(videos);
   return (
-    <Stack direction="row" flexWrap="wrap" justifyContent="flex-start" gap={2}>
+    <Stack direction="row" flexWrap="wrap" justifyContent="flex-start" gap={2} sx={{
+     marginLeft:"5%"
+   
+    }}>
       {videos.map((item, index) => (
-        <Box key={index}>
+        <Box key={index} >
           {item.id.videoId && <VideoCard video={item} />}
           {item.id.channelId && <ChannelCard channelDetail={item} />}
         </Box>

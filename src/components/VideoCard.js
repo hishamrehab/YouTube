@@ -4,7 +4,6 @@ import { Typography, Card, CardContent, CardMedia } from "@mui/material";
 import { CheckCircle } from "@mui/icons-material";
 
 import {
-  demoThumbnailUrl,
   demoChannelUrl,
   demoVideoUrl,
   demoChannelTitle,
@@ -20,10 +19,9 @@ const VideoCard = ({
   return (
     <Card
       sx={{
-        width: 
-         {  xs: "100%", sm: "358px", md: "320px" },
-          boxShadow: "none",
-          borderRadius: 0,
+        width: { xs: "100%", sm: "358px", md: "320px" },
+        boxShadow: "none",
+        borderRadius: "13px",
         
       }}
     >
@@ -41,12 +39,13 @@ const VideoCard = ({
 
       <CardContent
         sx={{
-          backgroundColor: "#1e1e1e",
+          // backgroundColor: "r",
           height: "106px",
+          color: "black",
         }}
       >
         <Link to={videoId ? `/video/${videoId}` : demoVideoUrl}>
-          <Typography variant="subtitle1" fontWeight="bold" color="#FFF">
+          <Typography variant="subtitle1" fontWeight="bold" color="#000">
             {snippet?.title.slice(0, 60) || demoVideoTitle.slice(0, 60)}
           </Typography>
         </Link>
@@ -58,7 +57,7 @@ const VideoCard = ({
               : demoChannelUrl
           }
         >
-          <Typography variant="subtitle1" fontWeight="bold" color="#FFF">
+          <Typography variant="subtitle1" fontWeight="bold" color="gray">
             {snippet?.channelTitle || demoChannelTitle}
             <CheckCircle
               sx={{

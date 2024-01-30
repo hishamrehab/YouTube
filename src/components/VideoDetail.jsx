@@ -41,7 +41,7 @@ const [videos, setVideos] = useState([]);
               controls
             />
 
-            <Typography color="#fff" variant="h5" fontWeight="bold" p={2}>
+            <Typography color="#000" variant="h5" fontWeight="bold" p={2}>
               {videoDetail && videoDetail.snippet.title}
             </Typography>
             <Stack direction="row" gap="5px" alignItems="center">

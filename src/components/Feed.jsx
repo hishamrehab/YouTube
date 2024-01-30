@@ -5,7 +5,7 @@ import { SideBar, Videos } from "../components/index";
 import { fetchFromApi } from "../utils/fetchFromApi";
 
 const Feed = () => {
-  const [selectedCategory, setSelectedCategory] = useState("New");
+  const [selectedCategory, setSelectedCategory] = useState("ALL");
   const [videos, setVideos] = useState([]);
   useEffect(() => {
     const data = fetchFromApi(`search?part=snippet&q=${selectedCategory}`).then(
@@ -22,6 +22,7 @@ const Feed = () => {
           sx: "column",
           md: "row",
         },
+    
       }}
     >
       <Box
@@ -37,7 +38,7 @@ const Feed = () => {
         />
         <Typography
           className="copyright"
-          varienst="body2"
+          variant="body2"
           sx={{
             mt: 1.5,
             color: "#fff",
@@ -54,16 +55,7 @@ const Feed = () => {
           flex: 2,
         }}
       >
-        <Typography
-          variant="h4"
-          fontWeight="bold"
-          mb={2}
-          sx={{
-            color: "white",
-          }}
-        >
-          {selectedCategory} <span style={{ color: "#F31503" }}>Videos</span>
-        </Typography>
+      
 
         <Videos videos={videos} />
       </Box>
