@@ -3,8 +3,8 @@ import { Stack, Box } from "@mui/material";
 import { VideoCard, ChannelCard } from "./index";
 
 const Videos = ({ videos }) => {
+  if (!videos?.length) return "Loading...";
   
-   if (!videos?.length) return "Loading...";
   return (
     <Stack
       direction="row"
