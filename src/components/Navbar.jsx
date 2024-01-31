@@ -13,10 +13,10 @@ const Navbar = () => {
         position: "sticky",
         background: "#FFF",
         top: 0,
-        
+
         flexWrap: "wrap",
         alignItems: "center",
-         alignContent:"center",
+        alignContent: "center",
         justifyContent: { xs: "center", md: "space-between" },
       }}
     >

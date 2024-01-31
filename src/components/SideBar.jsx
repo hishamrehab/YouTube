@@ -15,7 +15,6 @@ import TheaterComedyIcon from "@mui/icons-material/TheaterComedy";
 import FitnessCenterIcon from "@mui/icons-material/FitnessCenter";
 import DeveloperModeIcon from "@mui/icons-material/DeveloperMode";
 
-
 export const categories = [
   { name: "ALL", icon: <HomeIcon /> },
   { name: "Music", icon: <MusicNoteIcon /> },
@@ -34,8 +33,6 @@ export const categories = [
   { name: "Gym", icon: <FitnessCenterIcon /> },
   { name: "Crypto", icon: <DeveloperModeIcon /> },
 ];
-
-
 
 const Sidebar = ({ selectedCategory, setSelectedCategory }) => {
   return (

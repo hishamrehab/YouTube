@@ -9,7 +9,7 @@ import { fetchFromApi } from "../utils/fetchFromApi";
 
 const VideoDetail = () => {
   const [videoDetail, setVideoDetail] = useState(null);
-const [videos, setVideos] = useState([]);
+  const [videos, setVideos] = useState([]);
   const { id } = useParams();
 
   useEffect(() => {
@@ -17,12 +17,9 @@ const [videos, setVideos] = useState([]);
       setVideoDetail(data.items[0])
     );
 
-
-
-       fetchFromApi(
-         `search?part=snippet&relatedToVideoId=${id}&type=video`
-       ).then((data) => setVideos(data.items));
-
+    fetchFromApi(`search?part=snippet&relatedToVideoId=${id}&type=video`).then(
+      (data) => setVideos(data.items)
+    );
   }, [id]);
 
   return (
@@ -59,9 +56,14 @@ const [videos, setVideos] = useState([]);
         </Box>
       </Stack>
 
-   <Box px={2} py={{ md: 1, xs: 5 }} justifyContent="center" alignItems="center" >
-          <Videos videos={videos} direction="column" />
-        </Box>
+      <Box
+        px={2}
+        py={{ md: 1, xs: 5 }}
+        justifyContent="center"
+        alignItems="center"
+      >
+        <Videos videos={videos} direction="column" />
+      </Box>
     </Box>
   );
 };

@@ -22,7 +22,6 @@ const SearchFeed = () => {
         overflowY: "auto",
         height: "90vh",
         flex: 2,
-       
       }}
     >
       <Typography
@@ -31,7 +30,6 @@ const SearchFeed = () => {
         mb={2}
         sx={{
           color: "#000",
-
         }}
       >
         Search Results for:{" "}
