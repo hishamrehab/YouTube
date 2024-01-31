@@ -8,13 +8,14 @@ import {
   demoVideoUrl,
   demoChannelTitle,
   demoVideoTitle,
+   demoThumbnailUrl
 } from "../utils/constants";
 
 const VideoCard = ({
   video: {
     id: { videoId },
     snippet,
-  },
+  }
 }) => {
   return (
     <Card
@@ -31,14 +32,14 @@ const VideoCard = ({
             height: 180,
             objectFit: "fill",
           }}
-          image={snippet?.thumbnails?.high?.url}
+          image={snippet?.thumbnails?.high?.url || demoThumbnailUrl}
           alt={snippet?.title}
         />
       </Link>
 
       <CardContent
         sx={{
-          // backgroundColor: "r",
+       
           height: "106px",
           color: "black",
         }}

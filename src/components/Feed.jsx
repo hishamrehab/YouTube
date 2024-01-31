@@ -7,18 +7,13 @@ import { fetchFromApi } from "../utils/fetchFromApi";
 const Feed = () => {
   const [selectedCategory, setSelectedCategory] = useState("ALL");
   const [videos, setVideos] = useState(null);
- 
+
   useEffect(() => {
-        setVideos(null);
-   fetchFromApi(`search?part=snippet&q=${selectedCategory}`).then(
-      (data) => {
-        setVideos(data.items);
-      }
-
-    
-    );
+    setVideos(null);
+    fetchFromApi(`search?part=snippet&q=${selectedCategory}`).then((data) => {
+      setVideos(data.items);
+    });
   }, [selectedCategory]);
-
 
   return (
     <Stack

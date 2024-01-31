@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from "react";
+
 import { Stack } from "@mui/material";
 import MusicNoteIcon from "@mui/icons-material/MusicNote";
 import HomeIcon from "@mui/icons-material/Home";
@@ -14,12 +14,15 @@ import GraphicEqIcon from "@mui/icons-material/GraphicEq";
 import TheaterComedyIcon from "@mui/icons-material/TheaterComedy";
 import FitnessCenterIcon from "@mui/icons-material/FitnessCenter";
 import DeveloperModeIcon from "@mui/icons-material/DeveloperMode";
+import EngineeringIcon from "@mui/icons-material/Engineering";
 
 export const categories = [
   { name: "ALL", icon: <HomeIcon /> },
   { name: "Music", icon: <MusicNoteIcon /> },
-  { name: "Television Series", icon: <CodeIcon /> },
-  { name: "NextJS", icon: <CodeIcon /> },
+  { name: "Engineering", icon: <EngineeringIcon /> },
+  { name: "Medicine", icon: <CodeIcon /> },
+  { name: "dentist", icon: <CodeIcon /> },
+  { name: "React js", icon: <CodeIcon /> },
   { name: "Mixes", icon: <CodeIcon /> },
   { name: "Education", icon: <SchoolIcon /> },
   { name: "Podcast", icon: <GraphicEqIcon /> },

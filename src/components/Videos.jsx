@@ -4,7 +4,8 @@ import { VideoCard, ChannelCard } from "./index";
 
 const Videos = ({ videos }) => {
   if (!videos?.length) return "Loading...";
-  
+  console.log(videos);
+
   return (
     <Stack
       direction="row"
@@ -13,8 +14,8 @@ const Videos = ({ videos }) => {
       gap={2}
       sx={{
         marginLeft: "5%",
-      }}
-    >
+      }}>
+        
       {videos.map((item, index) => (
         <Box key={index}>
           {item.id.videoId && <VideoCard video={item} />}

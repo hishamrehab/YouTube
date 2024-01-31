@@ -25,7 +25,7 @@ const SearchBar = () => {
         border: "1px solid gray ",
         pl: 2,
         boxShadow: "none",
-        ml: { sm: 5 },
+        ml: { sm: 5 , xs: 7 },
         mr: { md: 6 },
       }}
     >
@@ -44,6 +44,7 @@ const SearchBar = () => {
           color: "red",
           background: "rgb(85, 85, 85)",
         }}
+        aria-label="search"
       >
         <SearchIcon />
       </IconButton>
