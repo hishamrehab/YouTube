@@ -30,6 +30,7 @@ const ChannelDetail = () => {
     <Box minHeight="95vh">
       <Box
 
+
       >
         <ChannelCard channelDetail={channelDetail} />
       </Box>

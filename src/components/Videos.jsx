@@ -4,7 +4,7 @@ import { VideoCard, ChannelCard } from "./index";
 
 const Videos = ({ videos }) => {
   if (!videos?.length) return "Loading...";
-  console.log(videos);
+  
 
   return (
     <Stack
