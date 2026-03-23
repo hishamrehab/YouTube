@@ -10,9 +10,10 @@ const SearchBar = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    const trimmedTerm = searchTerm.trim();
 
-    if (searchTerm) {
-      navigate(`/search/${searchTerm}`);
+    if (trimmedTerm) {
+      navigate(`/search/${trimmedTerm}`);
       setSearchTerm("");
     }
   };
@@ -21,28 +22,41 @@ const SearchBar = () => {
       component="form"
       onSubmit={handleSubmit}
       sx={{
-        borderRadius: 20,
-        border: "1px solid gray ",
+        borderRadius: 999,
+        border: "1px solid",
+        borderColor: "divider",
         pl: 2,
         boxShadow: "none",
-        ml: { sm: 5 , xs: 7 },
-        mr: { md: 6 },
+        width: { xs: "100%", sm: "440px", md: "620px" },
+        maxWidth: "100%",
+        backgroundColor: "background.paper",
+        display: "flex",
+        alignItems: "center",
+        overflow: "hidden",
       }}
     >
       <input
         className="search-bar"
-        placeholder="Search..."
+        placeholder="Search"
         value={searchTerm}
         onChange={(e) => {
           setSearchTerm(e.target.value);
         }}
       />
       <IconButton
-        type="Submit"
+        type="submit"
         sx={{
-          p: "10px",
-          color: "red",
-          background: "rgb(85, 85, 85)",
+          p: 1.2,
+          color: "text.primary",
+          borderLeft: "1px solid",
+          borderColor: "divider",
+          borderRadius: 0,
+          width: 64,
+          height: 42,
+          background: "#222",
+          "&:hover": {
+            background: "#2c2c2c",
+          },
         }}
         aria-label="search"
       >

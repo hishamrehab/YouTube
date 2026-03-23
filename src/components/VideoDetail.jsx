@@ -1,9 +1,9 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import ReactPlayer from "react-player";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { Typography, Box, Stack } from "@mui/material";
-import { Videos } from "./index";
+import { Loader, Videos } from "./index";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import { fetchFromApi } from "../utils/fetchFromApi";
 
@@ -22,50 +22,42 @@ const VideoDetail = () => {
     );
   }, [id]);
 
-  if (!videoDetail?.snippet) return "Loading...";
+  if (!videoDetail?.snippet) return <Loader message="Loading video..." fullScreen />;
 
   return (
     <Box minHeight="100vh">
       <Stack
         direction={{
           xs: "column",
-          // md: "row",
+          md: "row",
         }}
       >
         <Box flex={1}>
-          <Box sx={{ width: "100%", position: "sticky", top: "86px" }}>
+          <Box sx={{ width: "100%", position: "sticky", top: "64px", px: 2, py: 1.5 }}>
             <ReactPlayer
               url={`https://www.youtube.com/watch?v=${id}`}
               className="react-player"
               controls
             />
 
-            <Typography color="#000" variant="h5" fontWeight="bold" p={2}>
+            <Typography color="text.primary" variant="h5" fontWeight={700} pt={1.5}>
               {videoDetail && videoDetail.snippet.title}
             </Typography>
 
-            
-              <Stack direction="row" gap="5px" alignItems="center">
-           
-              
-                <Typography color="gray" variant="h6" fontWeight="bold" p={2}>
-                  {videoDetail && videoDetail.snippet.channelTitle}
-                </Typography>
-                <CheckCircleIcon
-                  sx={{
-                    fontSize: "12px",
-                    color: "gray",
-                  }}
-                />
-              </Stack>
-        
+            <Stack direction="row" gap="5px" alignItems="center" pt={1}>
+              <Typography color="text.secondary" variant="subtitle1" fontWeight={600}>
+                {videoDetail && videoDetail.snippet.channelTitle}
+              </Typography>
+              <CheckCircleIcon sx={{ fontSize: "12px", color: "text.secondary" }} />
+            </Stack>
           </Box>
         </Box>
         <Box
           px={2}
-          py={{ md: 1, xs: 5 }}
+          py={{ md: 2, xs: 3 }}
           justifyContent="center"
           alignItems="center"
+          sx={{ width: { md: "420px" } }}
         >
           <Videos videos={videos} direction="column" />
         </Box>

@@ -42,9 +42,11 @@ const Sidebar = ({ selectedCategory, setSelectedCategory }) => {
     <Stack
       direction="row"
       sx={{
-        overflowY: "auto",
-        height: { sx: "auto", md: "95%" },
+        overflowY: { xs: "hidden", md: "auto" },
+        overflowX: { xs: "auto", md: "hidden" },
+        height: { xs: "auto", md: "95%" },
         flexDirection: { md: "column" },
+        py: 1,
       }}
     >
       {categories.map((category) => (
@@ -54,25 +56,24 @@ const Sidebar = ({ selectedCategory, setSelectedCategory }) => {
             setSelectedCategory(category.name);
           }}
           style={{
-            background: category.name === selectedCategory && "#d8d0d0",
-            color: "#000",
+            background: category.name === selectedCategory ? "#272727" : "transparent",
+            color: category.name === selectedCategory ? "#ffffff" : "#d0d0d0",
             display: "flex",
             flexDirection: "row",
-            flexWrap: "wrap",
             cursor: "pointer",
           }}
           key={category.name}
         >
           <span
             style={{
-              color: category.name === selectedCategory ? "#000" : "#gray",
+              color: category.name === selectedCategory ? "#ff0000" : "#808080",
               marginRight: "15px",
             }}
           >
             {category.icon}
           </span>
           <span
-            style={{ opacity: category.name === selectedCategory ? "1" : ".8" }}
+            style={{ opacity: category.name === selectedCategory ? "1" : "0.85" }}
           >
             {category.name}
           </span>

@@ -14,12 +14,13 @@ const App = () => {
     <BrowserRouter>
       <Box
         sx={{
-          backgroundColor: "#FFF",
+          backgroundColor: "background.default",
+          minHeight: "100vh",
         }}
       >
         <Navbar />
-        <Routes>9 
-          <Route path="/" exact element={<Feed />} />
+        <Routes>
+          <Route path="/" element={<Feed />} />
           <Route path="/video/:id" element={<VideoDetail />} />
           <Route path="/channel/:id" element={<ChannelDetail />} />
           <Route path="/search/:searchTerm" element={<SearchFeed />} />

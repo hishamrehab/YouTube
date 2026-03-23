@@ -2,7 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { Box } from "@mui/material";
-import { Videos, ChannelCard } from "./index";
+import { Loader, Videos, ChannelCard } from "./index";
 import { fetchFromApi } from "../utils/fetchFromApi";
 
 const ChannelDetail = () => {
@@ -26,21 +26,15 @@ const ChannelDetail = () => {
     fetchResults();
   }, [id]);
 
+  if (!channelDetail?.snippet) return <Loader message="Loading channel..." fullScreen />;
+
   return (
     <Box minHeight="95vh">
-      <Box
-
-
-      >
-        <ChannelCard channelDetail={channelDetail} />
+      <Box sx={{ display: "flex", justifyContent: "center", py: 2 }}>
+        <ChannelCard channelDetail={channelDetail} marginTop="0px" />
       </Box>
 
-      <Box display="flex" p="2">
-        <Box
-          sx={{
-            mr: { sm: "100px" },
-          }}
-        />
+      <Box display="flex" p={2} justifyContent="center">
         <Videos videos={videos} />
       </Box>
     </Box>

@@ -13,7 +13,7 @@ const ChannelCard = ({ channelDetail, marginTop }) => {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        width: { xs: "356px", md: "320px" },
+        width: { xs: "100%", md: "320px" },
         height: "326px",
         marginTop,
       }}
@@ -25,8 +25,10 @@ const ChannelCard = ({ channelDetail, marginTop }) => {
             flexDirection: "column",
             justifyContent: "center",
             textAlign: "center",
-            color: "#000",
-            backgroundColor: "#fff",
+            color: "text.primary",
+            backgroundColor: "background.paper",
+            border: "1px solid",
+            borderColor: "divider",
             borderRadius: "5%",
           }}
         >
@@ -41,15 +43,15 @@ const ChannelCard = ({ channelDetail, marginTop }) => {
               height: "200px",
               width: "200px",
               mb: 2,
-              border: "1px solid #e3e3e3",
+              border: "1px solid #2f2f2f",
             }}
           />
-          <Typography variant="h6">
+          <Typography variant="h6" color="text.primary">
             {channelDetail?.snippet?.title}
             <CheckCircle
               sx={{
                 fontSize: 14,
-                color: "gray",
+                color: "text.secondary",
                 ml: "5px",
               }}
             />

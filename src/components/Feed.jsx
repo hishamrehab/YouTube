@@ -19,16 +19,17 @@ const Feed = () => {
     <Stack
       sx={{
         flexDirection: {
-          sx: "column",
+          xs: "column",
           md: "row",
         },
       }}
     >
       <Box
         sx={{
-          height: { sx: "auto", md: "92vh" },
-          borderRight: "1px solid #3d3d3d",
-          px: { sx: 0, md: 2 },
+          height: { xs: "auto", md: "calc(100vh - 64px)" },
+          borderRight: "none",
+          px: { xs: 1, md: 2 },
+          backgroundColor: "background.default",
         }}
       >
         <SideBar
@@ -40,20 +41,25 @@ const Feed = () => {
           variant="body2"
           sx={{
             mt: 1.5,
-            color: "#fff",
+            color: "text.secondary",
+            px: 1,
           }}
         >
-          CopeRight 2020 JSM Media
+          Copyright 2026 YouTube Clone
         </Typography>
       </Box>
       <Box
-        p={2}
+        p={{ xs: 1.5, md: 2 }}
         sx={{
           overflowY: "auto",
-          height: "90vh",
+          height: { xs: "auto", md: "calc(100vh - 64px)" },
           flex: 2,
+          backgroundColor: "background.default",
         }}
       >
+        <Typography variant="h5" sx={{ mb: 2 }}>
+          {selectedCategory} <span style={{ color: "#ff0000" }}>Videos</span>
+        </Typography>
         <Videos videos={videos} />
       </Box>
     </Stack>
