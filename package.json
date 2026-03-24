@@ -12,6 +12,8 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.6.7",
+    "baseline-browser-mapping": "^2.10.10",
+    "caniuse-lite": "^1.0.30001781",
     "firebase": "^10.7.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
