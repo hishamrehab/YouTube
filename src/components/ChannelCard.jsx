@@ -13,7 +13,7 @@ const ChannelCard = ({ channelDetail, marginTop }) => {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        width: { xs: "100%", md: "320px" },
+        width: { xs: "100%", sm: "340px", md: "360px" },
         height: "326px",
         marginTop,
       }}
@@ -33,10 +33,7 @@ const ChannelCard = ({ channelDetail, marginTop }) => {
           }}
         >
           <CardMedia
-            image={
-              channelDetail?.snippet?.thumbnails?.high?.url ||
-              demoProfilePicture
-            }
+            image={channelDetail?.snippet?.thumbnails?.high?.url || demoProfilePicture}
             alt={channelDetail?.snippet?.title}
             sx={{
               borderRadius: "50%",
@@ -56,8 +53,6 @@ const ChannelCard = ({ channelDetail, marginTop }) => {
               }}
             />
           </Typography>
-
-         
         </CardContent>
       </Link>
     </Box>

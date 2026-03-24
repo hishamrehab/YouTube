@@ -1,5 +1,6 @@
 import React from "react";
-import logo from "../assets/images/youtube-logo.svg";
+import logo from "../assets/images/logo.png";
+
 import { Box, Stack } from "@mui/material";
 import { Link } from "react-router-dom";
 import { SearchBar } from "./index";
@@ -32,7 +33,7 @@ const Navbar = () => {
             minWidth: "fit-content",
           }}
         >
-          <Box component="img" src={logo} alt="YouTube Clone" sx={{ width: { xs: 34, sm: 112 } }} />
+          <img src={logo} alt="logo" height={45} />{" "}
         </Link>
       </Box>
 
